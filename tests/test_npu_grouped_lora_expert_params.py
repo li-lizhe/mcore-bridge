@@ -13,6 +13,7 @@ import torch
 
 def _module(is_expert, num_gemms=2, bias=True):
     from megatron.core.transformer import TransformerConfig
+
     from mcore_bridge.tuners.npu_lora import NpuGroupedLoraLinear
     config = TransformerConfig(
         num_layers=1,
